@@ -1,21 +1,27 @@
 {
-  "exported_at": "2026-11-21T02:30:55.714989+00:00",
+  "exported_at": "2026-11-21T07:25:40.052286+00:00",
   "files": [
     {
       "task_id": 33,
       "file": "phamanhtuan-front.zip",
-      "bytes": 124253,
-      "sha256": "bcacb6f6f5f72e8d361dd3d12db2a728e598ac066275c890c6e35830ce003ddd",
+      "bytes": 61918,
+      "sha256": "fd4c6818c39b6d8d8f8b820fd4afd4ad9362a63cfdb7dc360db59760d8ac7c39",
       "format": "CVAT for images 1.1",
-      "save_images": false
+      "save_images": false,
+      "images": 16,
+      "shapes": 145,
+      "tags": 64
     },
     {
       "task_id": 34,
       "file": "phamanhtuan-fisheye.zip",
-      "bytes": 20389,
-      "sha256": "537dab0309357cf150948819011aa36799611302d1cd1e4211f4567b33117ef4",
+      "bytes": 32291,
+      "sha256": "d4b507fb146c982ef63e1242a470870a83afbe8fd72ce8790fcbe9235a24a40c",
       "format": "CVAT for images 1.1",
-      "save_images": false
+      "save_images": false,
+      "images": 12,
+      "shapes": 49,
+      "tags": 48
     }
   ]
 }

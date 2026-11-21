@@ -1,18 +1,6 @@
-Validation of repository tools; synthetic selftest is not a student grade.
-
-......................................                                   [100%]
-38 passed in 1.47s
-
-Self-test trên GT tổng hợp (không cần dữ liệu)
-[PASS] GT làm bài nộp: 0 lỗi, điểm tự động 78.0/78
-[PASS] QC1-01 ở A01: mong 1, thấy 1
-[PASS] QC1-04 ở A01: mong 2, thấy 2
-[PASS] QC1-05 ở A01: mong 1, thấy 1
-[PASS] QC1-08 ở A07: mong 1, thấy 1
-[PASS] bản làm nhiễu: 5 lỗi, mong đúng 5
-SELFTEST PASS
-
-Revision 2: 38 lab tests passed in 1.46s using isolated basetemp; initial default-temp run hit WinError 5 (28 passed, 10 setup errors).
-Agent Docker: 57 road geometry/occlusion tests passed. YOLOPv2 A06/A09 smoke inference passed; 8/7 vehicle boxes.
-CVAT: only existing drivable polygons at frames 5/8 changed; 210 shapes and 64 tags preserved; exported XML points match readback.
-No independent GT accuracy or peer-QC result is claimed.
+CVAT source: task 33 front / task 34 fisheye, direct export.
+Current counts: front 145 shapes + 64 tags; fisheye 49 shapes + 48 tags.
+road_check lint: 28 images, 31 findings (9 critical, 17 major, 5 minor); full log in ../out/cvat_export_20261121T1018/lint-revision4.txt.
+Checker selftest: PASS on synthetic fixture; 78/78 is not learner score.
+pytest: 38 passed in 1.50s.
+No ground-truth accuracy or peer QC claimed.

@@ -3,47 +3,34 @@
   "format": "CVAT for images 1.1",
   "guideline": "Road v1.0",
   "name": "phamanhtuan",
-  "revision": 2,
-  "created_at": "2026-11-21T02:31:42.874152+00:00",
+  "revision": 4,
+  "created_at": "2026-11-21T07:25:40.052827+00:00",
   "files": [
     {
       "file": "phamanhtuan-front.zip",
-      "bytes": 124253,
-      "sha256": "bcacb6f6f5f72e8d361dd3d12db2a728e598ac066275c890c6e35830ce003ddd",
+      "bytes": 61918,
+      "sha256": "fd4c6818c39b6d8d8f8b820fd4afd4ad9362a63cfdb7dc360db59760d8ac7c39",
       "contains_images": false,
       "images": 16,
       "images_unlabelled": 0,
       "images_all_tags": 16,
-      "shapes_by_label": {
-        "crosswalk": 8,
-        "drivable": 28,
-        "lane": 40,
-        "road_curb": 15,
-        "traffic_light": 59,
-        "traffic_sign": 60
-      }
+      "shapes": 145
     },
     {
       "file": "phamanhtuan-fisheye.zip",
-      "bytes": 20389,
-      "sha256": "537dab0309357cf150948819011aa36799611302d1cd1e4211f4567b33117ef4",
+      "bytes": 32291,
+      "sha256": "d4b507fb146c982ef63e1242a470870a83afbe8fd72ce8790fcbe9235a24a40c",
       "contains_images": false,
       "images": 12,
       "images_unlabelled": 0,
       "images_all_tags": 12,
-      "shapes_by_label": {
-        "crosswalk": 8,
-        "drivable": 4,
-        "lane": 2,
-        "road_curb": 2,
-        "traffic_light": 2
-      }
+      "shapes": 49
     }
   ],
   "lint": {
-    "nặng": 7,
-    "chính": 0,
-    "nhẹ": 0
+    "critical": 9,
+    "major": 17,
+    "minor": 5
   },
-  "note": "Tạo bởi road_check lint. Mô tả file đã gửi, không phải kết luận chất lượng."
+  "note": "Structure-only lint; not an accuracy score."
 }
