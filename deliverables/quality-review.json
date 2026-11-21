@@ -60,5 +60,15 @@
   "independent_peer": null,
   "coach_exemptions_confirmed": [],
   "cvat_synchronized": true,
-  "cvat_readback_matches": true
+  "cvat_readback_matches": true,
+  "revision": 2,
+  "drivable_visual_corrections": {
+    "task_id": 33,
+    "frames": [
+      5,
+      8
+    ],
+    "only_two_polygons_changed": true,
+    "ground_truth_verified": false
+  }
 }

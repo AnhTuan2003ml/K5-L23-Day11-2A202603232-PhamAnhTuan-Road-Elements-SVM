@@ -11,3 +11,8 @@ Self-test trên GT tổng hợp (không cần dữ liệu)
 [PASS] QC1-08 ở A07: mong 1, thấy 1
 [PASS] bản làm nhiễu: 5 lỗi, mong đúng 5
 SELFTEST PASS
+
+Revision 2: 38 lab tests passed in 1.46s using isolated basetemp; initial default-temp run hit WinError 5 (28 passed, 10 setup errors).
+Agent Docker: 57 road geometry/occlusion tests passed. YOLOPv2 A06/A09 smoke inference passed; 8/7 vehicle boxes.
+CVAT: only existing drivable polygons at frames 5/8 changed; 210 shapes and 64 tags preserved; exported XML points match readback.
+No independent GT accuracy or peer-QC result is claimed.
