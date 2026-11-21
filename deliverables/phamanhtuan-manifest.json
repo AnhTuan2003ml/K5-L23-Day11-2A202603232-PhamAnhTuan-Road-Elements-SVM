@@ -3,48 +3,48 @@
   "format": "CVAT for images 1.1",
   "guideline": "Road v1.0",
   "name": "phamanhtuan",
-  "revision": 4,
-  "created_at": "2026-11-21T07:31:14+00:00",
+  "revision": 1,
+  "created_at": "2026-11-21T09:06:51+00:00",
   "files": [
     {
       "file": "phamanhtuan-front.zip",
-      "bytes": 61918,
-      "sha256": "fd4c6818c39b6d8d8f8b820fd4afd4ad9362a63cfdb7dc360db59760d8ac7c39",
-      "contains_images": false,
-      "images": 16,
-      "images_unlabelled": 0,
-      "images_all_tags": 16,
-      "shapes_by_label": {
-        "crosswalk": 6,
-        "drivable": 32,
-        "lane": 46,
-        "road_curb": 12,
-        "traffic_light": 22,
-        "traffic_sign": 27
-      }
-    },
-    {
-      "file": "phamanhtuan-fisheye.zip",
-      "bytes": 32291,
-      "sha256": "d4b507fb146c982ef63e1242a470870a83afbe8fd72ce8790fcbe9235a24a40c",
+      "bytes": 8720,
+      "sha256": "b36593572c197fd4645cacd6b53665676189b5ae04094d4b379a25cd2ce2da49",
       "contains_images": false,
       "images": 12,
       "images_unlabelled": 0,
       "images_all_tags": 12,
       "shapes_by_label": {
-        "crosswalk": 13,
-        "drivable": 12,
-        "lane": 8,
-        "road_curb": 13,
-        "traffic_light": 2,
-        "traffic_sign": 1
+        "crosswalk": 5,
+        "drivable": 24,
+        "lane": 33,
+        "road_curb": 3,
+        "traffic_light": 29,
+        "traffic_sign": 32
+      }
+    },
+    {
+      "file": "phamanhtuan-fisheye.zip",
+      "bytes": 6315,
+      "sha256": "e1ed8994e05a2990f47344ccb9b8b907bdb1fdd579baf1f7082cc95a17dc43b9",
+      "contains_images": false,
+      "images": 8,
+      "images_unlabelled": 0,
+      "images_all_tags": 8,
+      "shapes_by_label": {
+        "crosswalk": 9,
+        "drivable": 11,
+        "lane": 9,
+        "road_curb": 7,
+        "traffic_light": 7,
+        "traffic_sign": 5
       }
     }
   ],
   "lint": {
-    "nặng": 15,
-    "chính": 15,
-    "nhẹ": 1
+    "nặng": 2,
+    "chính": 0,
+    "nhẹ": 0
   },
   "note": "Tạo bởi road_check lint. Mô tả file đã gửi, không phải kết luận chất lượng."
 }

@@ -43,4 +43,4 @@ uv run --with pytest==8.3.4 pytest -q
 
 ## Kết quả của Phạm Anh Tuấn
 
-[Bản xuất CVAT, manifest và báo cáo](deliverables/README.md). Bản này chưa Release: còn 7 cảnh báo L1/R1 và QC chéo đang chờ dữ liệu. Không có ảnh nguồn hoặc GT trong bản bàn giao.
+[Bản xuất CVAT, manifest và báo cáo](deliverables/README.md). Bộ bàn giao gồm 20 ảnh bắt buộc và đạt QC sau khi áp dụng ngoại lệ đã được xác nhận cho hai cảnh báo QC1-02 ở A05. Chưa có quyết định Release lưu trong repo. Không có ảnh nguồn hoặc GT trong bản bàn giao.

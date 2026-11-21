@@ -1,59 +1,74 @@
-# Báo cáo cá nhân — Ngày 11
+# Báo cáo cá nhân — Ngày 11 · Road Elements & SVM
 
-Họ tên: Phạm Anh Tuấn. Mã học viên: 2A202603232.
+**Phạm Anh Tuấn · 2A202603232**
 
-Phiên bản CVAT: 2.82.1. Guideline: Road v1.0. Revision: 4. Thời điểm export: xem `export-receipt.json`.
+Road v1.0 · Revision 1
 
-## 1. Kiểm project
+**Kết quả QC: PASS sau khi áp dụng ngoại lệ A05 đã được QC xác nhận.** Bộ ZIP cục bộ gồm 20 ảnh bắt buộc, 174 shape và 80 tag. Lint ghi nhận **2 cảnh báo nặng QC1-02**, cùng ở A05. Sau khi áp dụng ngoại lệ, không còn cảnh báo nào cần xử lý trong kết quả lint.
 
-| Mục | Kết quả | Ghi chú |
-| --- | --- | --- |
-| 6 label và kiểu | Đối chiếu đúng schema Road v1.0 | lane, road_curb, crosswalk, drivable, traffic_light, traffic_sign |
-| Thuộc tính | Có trong export theo schema task | Lint không đánh giá độ chính xác thị giác |
-| 4 tag ảnh | Đủ 4 tag trên 28 ảnh | camera, timeofday, weather, source |
+## 1. Kiểm project và nguồn nhãn
 
-Tôi tự gán nhãn trên máy khác và nhập vào CVAT task front và fisheye. Tôi export lại trực tiếp từ task 33/34 để lập báo cáo này.
+Bộ file dựa trên export từ task 33/34. Hai mươi ảnh A01–A12 và B01–B08 dùng nhãn và tag từ bộ ZIP của Nguyễn Thanh Phong. Sau khi rà ảnh gốc, A10 được bỏ một box biển dưới 8 px theo guideline. Phạm vi bàn giao chỉ gồm phần bắt buộc.
 
-## 2. Số lượng đã gán
+Bộ ZIP có sáu nhãn theo Road v1.0 và đủ bốn tag camera, timeofday, weather và source trên cả 20 ảnh. Trong CVAT, bấm **N** để kết thúc polyline. Khi đặt tag ảnh, chọn kiểu **Tag** và điền thuộc tính `value`. [Hướng dẫn CVAT](../docs/huong_dan_cvat_bang_hinh.md)
 
-| Task | Ảnh | lane | road_curb | crosswalk | drivable | traffic_light | traffic_sign |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| front | 16 | 46 | 12 | 6 | 32 | 22 | 27 |
-| fisheye | 12 | 8 | 13 | 13 | 12 | 2 | 1 |
+## 2. Số lượng nhãn
 
-Tổng: 28 ảnh, 194 shape và 112 tag.
+| Lô | Ảnh | lane | road_curb | crosswalk | drivable | traffic_light | traffic_sign | Tổng shape |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Front | 12 | 33 | 3 | 5 | 24 | 29 | 32 | 126 |
+| Fisheye | 8 | 9 | 7 | 9 | 11 | 7 | 5 | 48 |
 
-## 3. Bảng ca khó và cảnh báo
+## 3. Cảnh báo theo ảnh
 
-Lint trên hai ZIP mới ghi nhận 31 cảnh báo: 9 nặng, 17 chính, 5 nhẹ. Ảnh cần rà gồm A02, A03, A04, A05, A06, A07, A08, A09, A10, A11, A14, A15, A16, B02, B03, B04, B07, B08, B10 và B11. Chi tiết theo mã QC nằm trong `../out/cvat_export_20261121T1018/lint-revision4.txt`.
+| Mã | Mức | Số | Ảnh | Kết quả rà |
+| --- | --- | ---: | --- | --- |
+| QC1-02 | Nặng | 2 | A05 | Ảnh gốc không thấy vạch sơn L1/R1. QC đã xác nhận ngoại lệ cho cả hai cảnh báo, theo thông tin học viên cung cấp. |
 
-Các nhóm cảnh báo chính: hướng polyline; thiếu hoặc trùng position lane; kích thước box biển; edge_zone; camera tag; và position=other cho camera bên hông. Đây là gợi ý tự kiểm, không phải kết luận của coach.
+[Log lint cục bộ](../out/core_only_20261121T082351069886Z/lint.txt)
 
-## 4. Phiếu QC 1 nhận được
+## 4. Phiếu QC1 nhận được
 
-Tôi chưa nhận được bài của học viên được ghép hoặc phiếu QC trả về. Vì vậy chưa có số lỗi, quyết định hay xác nhận Release. File chờ dữ liệu được đặt tên `phamanhtuan-qc1-for-peer-pending.md`; file này chưa thay thế phiếu QC chéo đã hoàn thành.
+Học viên báo QC đã xác nhận ngoại lệ QC1-02 cho A05 (L1 và R1). Chưa có phiếu QC1 đầy đủ hoặc quyết định Release lưu trong repo. Phiếu kiểm lô Nguyễn Thanh Phong cũng đề xuất Hold tại A05. [Phiếu kiểm lô Nguyễn Thanh Phong](phamanhtuan-qc1-for-nguyenthanhphong.md)
 
-## 5. Kiểm file export
+## 5. Kiểm file bàn giao
 
-| File | Mở lại được | Ảnh | Shape | Tag camera |
-| --- | --- | ---: | ---: | --- |
-| phamanhtuan-front.zip | Có | 16 | 145 | Có |
-| phamanhtuan-fisheye.zip | Có | 12 | 49 | Có |
+| File | Mở lại | Shape ảnh 1 / ảnh 2 trong XML | Ảnh đủ 4 tag |
+| --- | --- | --- | ---: |
+| phamanhtuan-front.zip | Có | A01: 8 / A02: 5 | 12/12 |
+| phamanhtuan-fisheye.zip | Có | B01: 5 / B02: 8 | 8/8 |
 
-Hai ZIP là CVAT for images 1.1, không kèm ảnh. SHA-256 và số byte được ghi trong `phamanhtuan-manifest.json` và `export-receipt.json`. Lint tạo manifest revision 4; còn 31 cảnh báo.
+Hai ZIP chứa `annotations.xml` theo định dạng CVAT for images 1.1. Đã tải hai ZIP và manifest từ Drive để đối chiếu. SHA-256 của cả ba file khớp bản cục bộ đã kiểm. [Thư mục D11 trên Google Drive](https://drive.google.com/drive/folders/1vTJRBtQC7eHw4MEU_ozNQ13UDO2WnfEr?usp=sharing)
 
-## 6. Ảnh chụp màn hình và XML
+| Tệp đã tải lên | Dung lượng | Kết quả đối chiếu |
+| --- | ---: | --- |
+| [phamanhtuan-front.zip](https://drive.google.com/file/d/1tjiuO92_LmluXl-08S0TrNh4urACsyN5/view?usp=drivesdk) | 8.695 byte | Khớp SHA-256 |
+| [phamanhtuan-fisheye.zip](https://drive.google.com/file/d/1Ck6B9MsJxagNOhawAuxFbuOmfERp2GjA/view?usp=drivesdk) | 6.315 byte | Khớp SHA-256 |
+| [phamanhtuan-manifest.json](https://drive.google.com/file/d/1NmYrQvMPgLUSOSeJ0n6shrJpm267VDIV/view?usp=drivesdk) | 1.328 byte | Khớp SHA-256, revision 1 |
 
-Ảnh chụp task sau nhập được giữ trong thư mục cục bộ `out/d11_submission_20261121/candidate/assets/`. Một đoạn XML lane có trong `phamanhtuan-front.zip`. Ảnh dữ liệu không được đưa vào gói bàn giao.
+## 6. Minh chứng
+
+Thư mục Drive hiện có hai ZIP và manifest. Các ảnh chụp dưới đây là minh chứng thao tác trên CVAT của bản ứng viên trước. Ảnh chụp tab Labels, ảnh front và fisheye khớp revision 1, cùng xác nhận job `completed` cho bộ 20 ảnh, chưa có trong hồ sơ.
+
+- [Project CVAT trước khi nhập bản ứng viên](../out/d11_submission_20261121/candidate/assets/cvat-project-before-import.png)
+- [Ảnh front sau khi nhập bản ứng viên](../out/d11_submission_20261121/candidate/assets/cvat-front-after-import.png)
+- [Ảnh fisheye sau khi nhập bản ứng viên](../out/d11_submission_20261121/candidate/assets/cvat-fisheye-after-import.png)
+
+Đoạn polyline dưới đây trích từ `annotations.xml` của ảnh A01 trong ZIP front revision 1.
+
+```xml
+<polyline label="lane" source="manual" occluded="0" points="1280.00,705.90;461.40,509.60" z_order="0">
+  <attribute name="position">R2</attribute>
+  <attribute name="style">solid</attribute>
+  <attribute name="color">yellow</attribute>
+  <attribute name="kind">single</attribute>
+</polyline>
+```
 
 ## 7. Tự đánh giá
 
-Tôi cần rà các lane trùng position, hướng polyline và camera tag mà lint nêu. Tôi chưa so với ground truth, chưa có QC chéo và không tuyên bố precision, recall, IoU hoặc điểm accuracy. Selftest checker dùng dữ liệu tổng hợp, không phải điểm bài làm.
+Đã rà A05 và ghi nhận ngoại lệ QC đã xác nhận vì ảnh không thấy vạch phân làn. Gán vạch suy đoán ở đây có thể làm model học ranh giới làn sai. Lint chạy trên hai ZIP hiện tại. Lần kiểm tra công cụ trước khi đóng gói đạt 38/38 test và selftest PASS trên dữ liệu tổng hợp. Chưa đối chiếu với ground truth của coach.
 
-## 8. Hoạt động row-anchor (tùy chọn)
+## 8. Row-anchor (tùy chọn)
 
-Tôi chưa đối chiếu polyline với bài của học viên được ghép nên không có số chênh lệch hai bên. Phân tích độc lập row-anchor trước đây nằm trong hồ sơ truy vết cục bộ, không tính là QC chéo.
-
-## Kết luận
-
-Bản revision 4 phản ánh dữ liệu hiện có trên task 33/34: 194 shape và 112 tag. Lint có 31 cảnh báo cần rà; chưa có xác nhận coach hoặc QC chéo nên trạng thái chưa Release.
+Không thực hiện.
