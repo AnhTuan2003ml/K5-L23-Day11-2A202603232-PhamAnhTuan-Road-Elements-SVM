@@ -1,0 +1,21 @@
+{
+  "exported_at": "2026-11-21T02:07:25.050254+00:00",
+  "files": [
+    {
+      "task_id": 33,
+      "file": "phamanhtuan-front.zip",
+      "bytes": 125114,
+      "sha256": "0988bc0874209c807e0975091060405bc868003fd6be0908c11c020c21774404",
+      "format": "CVAT for images 1.1",
+      "save_images": false
+    },
+    {
+      "task_id": 34,
+      "file": "phamanhtuan-fisheye.zip",
+      "bytes": 20389,
+      "sha256": "537dab0309357cf150948819011aa36799611302d1cd1e4211f4567b33117ef4",
+      "format": "CVAT for images 1.1",
+      "save_images": false
+    }
+  ]
+}
