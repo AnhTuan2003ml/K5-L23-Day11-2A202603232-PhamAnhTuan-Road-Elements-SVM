@@ -1,6 +1,0 @@
-CVAT source: task 33 front / task 34 fisheye, direct export.
-Current counts: front 145 shapes + 64 tags; fisheye 49 shapes + 48 tags.
-road_check lint: 28 images, 31 findings (9 critical, 17 major, 5 minor); full log in ../out/cvat_export_20261121T1018/lint-revision4.txt.
-Checker selftest: PASS on synthetic fixture; 78/78 is not learner score.
-pytest: 38 passed in 1.50s.
-No ground-truth accuracy or peer QC claimed.

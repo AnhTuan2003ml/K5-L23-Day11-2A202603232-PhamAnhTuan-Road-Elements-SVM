@@ -4,7 +4,7 @@
   "guideline": "Road v1.0",
   "name": "phamanhtuan",
   "revision": 4,
-  "created_at": "2026-11-21T07:25:40.052827+00:00",
+  "created_at": "2026-11-21T07:31:14+00:00",
   "files": [
     {
       "file": "phamanhtuan-front.zip",
@@ -14,7 +14,14 @@
       "images": 16,
       "images_unlabelled": 0,
       "images_all_tags": 16,
-      "shapes": 145
+      "shapes_by_label": {
+        "crosswalk": 6,
+        "drivable": 32,
+        "lane": 46,
+        "road_curb": 12,
+        "traffic_light": 22,
+        "traffic_sign": 27
+      }
     },
     {
       "file": "phamanhtuan-fisheye.zip",
@@ -24,13 +31,20 @@
       "images": 12,
       "images_unlabelled": 0,
       "images_all_tags": 12,
-      "shapes": 49
+      "shapes_by_label": {
+        "crosswalk": 13,
+        "drivable": 12,
+        "lane": 8,
+        "road_curb": 13,
+        "traffic_light": 2,
+        "traffic_sign": 1
+      }
     }
   ],
   "lint": {
-    "critical": 9,
-    "major": 17,
-    "minor": 5
+    "nặng": 15,
+    "chính": 15,
+    "nhẹ": 1
   },
-  "note": "Structure-only lint; not an accuracy score."
+  "note": "Tạo bởi road_check lint. Mô tả file đã gửi, không phải kết luận chất lượng."
 }
